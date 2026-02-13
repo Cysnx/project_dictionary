@@ -1,0 +1,18 @@
+
+word;language;type;meaning
+"to elicit";"english";"verb";"evoke or draw out (a reaction, answer, or fact) from someone"
+"fiscal";english;"adjective";"relating to government revenue, especially taxes"
+"to purport";"english";"verb";"to have the often specious appearance of being, intending, or claiming (something implied or inferred)"
+"specious";"english";"adjective";"having a false look of truth or genuineness"
+"flippant";"english";"adjective";"lacking proper respect or seriousness"
+"lofty";"english";"adjective";"rising to a great height : impressively high"
+"prevalent";"english";"adjective";"being in ascendancy : dominant"
+"conjecture";"english";"noun";"math - inference formed without proof or sufficient evidence"
+"endemic";"english";"adjective";"Biology - native to a specific geographic base"
+"naturalist";"english";"noun";"Biology - person who studies the natural history or natural development of organisms and the environment"
+"enigmatic";"english";"adjective";"being beyond one's powers to know, understand, or explain"
+"to preclude";"english";"verb";"to keep from happening by taking action in advance"
+"niche";"english";"noun";"Biology - the place where a plant or animal is usually or naturally found"
+"marsupial";"english";"noun";"Biology - any of an order (Marsupialia) of mammals comprising kangaroos, wombats, bandicoots, opossums, and related animals that do not develop a true placenta and that usually have a pouch on the abdomen of the female which covers the teats and serves to carry the young"
+"rodent";"english";"noun";"Biology - any of an order (Rodentia) of relatively small gnawing mammals (such as a mouse, squirrel, or beaver) that have in both jaws a single pair of incisors with a chisel-shaped edge"
+"archaea";"english";"noun";"Biology - usually single-celled, prokaryotic microorganisms of a domain (Archaea) that includes methanogens and those of harsh environments (such as acidic hot springs, hypersaline lakes, and deep-sea hydrothermal vents) which obtain energy from a variety of sources"
