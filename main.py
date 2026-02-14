@@ -14,9 +14,9 @@ w_response=0
 num_old=[]
 response=""
 
-learn_matrix=pd.DataFrame(data={"word":[''],"c_response":[0],"w_response":[0],"w/c_ratio":[0.0]})
+learn_matrix=pd.DataFrame({"word":[""],"c_response":[0],"w_response":[0],"w/c_ratio":[0.0]})
 
-#learn_matrix=pd.read_csv("learn_matrix.csv")
+#learn_matrix=pd.read_csv("learn_matrix.txt",sep=';')
 
 while True:
     print(f"What is the word for the following: {df['meaning'][num]}")
@@ -42,4 +42,4 @@ while True:
     num=random.randint(0,len(df["word"])-1)
 print(learn_matrix)
 print(num_old)
-learn_matrix.to_csv("learn_matrix.txt",sep=";")
+learn_matrix.to_csv("learn_matrix.txt",sep=";",index=False)

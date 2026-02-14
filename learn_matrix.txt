@@ -1,2 +1,14 @@
-;word;c_response;w_response;w/c_ratio
-0;;0;0;0.0
+word;c_response;w_response;w/c_ratio
+;0;0;0.0
+orth/o;1;0;0.0
+to purport;0;1;1.0
+yağlı urgan;2;0;0.0
+indigenous;0;1;1.0
+froth;2;0;0.0
+lichen;1;0;0.0
+morph/o;1;0;0.0
+plas/o;0;1;1.0
+ravine;1;0;0.0
+troph/o;1;0;0.0
+kelp;1;0;0.0
+conjecture;0;1;1.0
