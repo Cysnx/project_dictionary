@@ -1,4 +1,3 @@
-
 word;language;type;meaning
 "to elicit";"english";"verb";"evoke or draw out (a reaction, answer, or fact) from someone"
 "fiscal";english;"adjective";"relating to government revenue, especially taxes"
@@ -16,3 +15,5 @@ word;language;type;meaning
 "marsupial";"english";"noun";"Biology - any of an order (Marsupialia) of mammals comprising kangaroos, wombats, bandicoots, opossums, and related animals that do not develop a true placenta and that usually have a pouch on the abdomen of the female which covers the teats and serves to carry the young"
 "rodent";"english";"noun";"Biology - any of an order (Rodentia) of relatively small gnawing mammals (such as a mouse, squirrel, or beaver) that have in both jaws a single pair of incisors with a chisel-shaped edge"
 "archaea";"english";"noun";"Biology - usually single-celled, prokaryotic microorganisms of a domain (Archaea) that includes methanogens and those of harsh environments (such as acidic hot springs, hypersaline lakes, and deep-sea hydrothermal vents) which obtain energy from a variety of sources"
+"yağlı urgan";"türkçe";"isim";"idamda kullanılan kalın ip"
+"verev";"türkçe";"isim";"tekstil - çarpraz,diyagonal"
