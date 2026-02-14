@@ -1,0 +1,2 @@
+;word;c_response;w_response;w/c_ratio
+0;;0;0;0.0

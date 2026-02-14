@@ -1,5 +1,6 @@
 import pandas as pd
 import random
+import time
 
 df=pd.read_csv("items.txt",sep=';')
 
@@ -13,20 +14,24 @@ w_response=0
 num_old=[]
 response=""
 
-learn_matrix=pd.DataFrame(data={"word":[''],"c_response":[0],"w_response":[0],"w/c_ratio":[0]})
-print(learn_matrix)
-while response!="exit": # sonda wrong yazısını düzeltmem gerek.
+learn_matrix=pd.DataFrame(data={"word":[''],"c_response":[0],"w_response":[0],"w/c_ratio":[0.0]})
+
+#learn_matrix=pd.read_csv("learn_matrix.csv")
+
+while True:
     print(f"What is the word for the following: {df['meaning'][num]}")
     response=input("")
-    if response==df["word"][num]:
-        if df["word"][num] in learn_matrix["word"]:
+    if response=="exit":
+        break
+    elif response==df["word"][num]:
+        if df["word"][num] in learn_matrix["word"].values:
             learn_matrix.loc[learn_matrix["word"]==df["word"][num],"c_response"]+=1
         else:
             learn_matrix.loc[len(learn_matrix)]=[df["word"][num],0,0,0]
             learn_matrix.loc[learn_matrix["word"] == df["word"][num], "c_response"] += 1
         print("Correct!")
     else:
-        if df["word"][num] in learn_matrix["word"]:
+        if df["word"][num] in learn_matrix["word"].values:
             learn_matrix.loc[learn_matrix["word"]==df["word"][num],"w_response"]+=1
         else:
             learn_matrix.loc[len(learn_matrix)]=[str(df["word"][num]),0,0,0]
@@ -37,3 +42,4 @@ while response!="exit": # sonda wrong yazısını düzeltmem gerek.
     num=random.randint(0,len(df["word"])-1)
 print(learn_matrix)
 print(num_old)
+learn_matrix.to_csv("learn_matrix.txt",sep=";")
