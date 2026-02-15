@@ -2,6 +2,7 @@ import pandas as pd
 import random
 import os
 import time
+from datetime import datetime
 
 df=pd.read_csv("items.txt",sep=';')
 
@@ -17,9 +18,9 @@ response=""
 
 
 if os.path.exists("learn_matrix.txt"):
-    learn_matrix=pd.read_csv("learn_matrix.txt",sep=';')
+    learn_matrix=pd.read_csv("learn_matrix.txt", sep=';')
 else:
-    learn_matrix=pd.DataFrame(columns=["word","c_response","w_response","w/c ratio"])
+    learn_matrix=pd.DataFrame(columns=["word","c_response","w_response","w/c_ratio","datetime_seen_first"])
 
 while True:
     print(f"What is the word ({df['type'][num]}) for the following: {df['meaning'][num]}")
@@ -30,14 +31,14 @@ while True:
         if df["word"][num] in learn_matrix["word"].values:
             learn_matrix.loc[learn_matrix["word"]==df["word"][num],"c_response"]+=1
         else:
-            learn_matrix.loc[len(learn_matrix)]=[df["word"][num],0,0,0.0]
+            learn_matrix.loc[len(learn_matrix)]=[df["word"][num],0,0,0.0,datetime.now().isoformat()]
             learn_matrix.loc[learn_matrix["word"] == df["word"][num], "c_response"] += 1
         print("Correct!")
     else:
         if df["word"][num] in learn_matrix["word"].values:
             learn_matrix.loc[learn_matrix["word"]==df["word"][num],"w_response"]+=1
         else:
-            learn_matrix.loc[len(learn_matrix)]=[str(df["word"][num]),0,0,0.0]
+            learn_matrix.loc[len(learn_matrix)]=[str(df["word"][num]),0,0,0.0,datetime.now().isoformat()]
             learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w_response"] += 1
         print("Wrong. Correct answer is: ",df["word"][num])
     learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w/c_ratio"] =learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w_response"]/(1+learn_matrix.loc[learn_matrix["word"] == df["word"][num], "c_response"])
