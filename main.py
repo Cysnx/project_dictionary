@@ -27,7 +27,7 @@ def power_law(c_response,w_response,datetime_last_c_response): ## bunu çalışm
         or pd.isna(datetime_last_c_response)
         or datetime_last_c_response == 'N/A'
     ):
-        return 1.0
+        return 0.0
 
     if isinstance(datetime_last_c_response, str):
         last_c = datetime.fromisoformat(datetime_last_c_response)
@@ -100,3 +100,4 @@ while True:
 print(learn_matrix)
 print(num_old)
 learn_matrix.to_csv("learn_matrix.txt",sep=";",index=False)
+
