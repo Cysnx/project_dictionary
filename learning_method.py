@@ -7,6 +7,7 @@ def power_law(c_response,w_response,datetime_last_c_response): ## bunu çalışm
 
     if (
         datetime_last_c_response is None
+        or datetime_last_c_response == ""
         or datetime_last_c_response == ''
         or pd.isna(datetime_last_c_response)
         or datetime_last_c_response == 'N/A'
