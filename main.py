@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 from learning_method import power_law
 
+
 df=pd.read_csv("items.txt",sep=';')
 
 #print(df["meaning"][14])
@@ -21,6 +22,8 @@ if os.path.exists("learn_matrix.txt"):
     learn_matrix=pd.read_csv("learn_matrix.txt", sep=';')
 else:
     learn_matrix=pd.DataFrame(columns=["word","c_response","w_response","w/c_ratio","datetime_seen_first","datetime_last_c_response","p_law"])
+
+import learn_matrix_update
 
 while True:
     print(f"What is the word ({df['type'][num]}) for the following: {df['meaning'][num]}")
