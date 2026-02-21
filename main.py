@@ -25,6 +25,10 @@ else:
 
 import learn_matrix_update
 
+#epsilon=0.01
+
+#num=random.choices(learn_matrix[["word"]],weights=1/(epsilon + learn_matrix["p_law"]),k=1) ## Biraz daha karısmaya başladı.
+
 while True:
     print(f"What is the word ({df['type'][num]}) for the following: {df['meaning'][num]}")
     response=input("")

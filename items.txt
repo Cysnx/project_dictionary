@@ -78,3 +78,5 @@ word;language;type;meaning
 "triebhaushalt";"deutsch";"neutrum";"sociology - drive-economy, the way in which our drives and impulses are organised in our personality."
 "to trickle down";"english";"verb";"Finance - to start at the top of a system, organization, etc. and spread to all of it."
 "effervescence";"français";"nom";"Agitation, émotion intense et passagère. Une effervescence politique, religieuse, intellectuelle. Calmer l’effervescence des esprits."
+"oeuvre";"english";"noun";"a substantial body of work constituting the lifework of a writer, an artist, or a composer"
+"to impute";"english";"verb";"to credit or ascribe (something) to a person, cause, etc. : attribute"
