@@ -3,7 +3,7 @@ import random
 import os
 from datetime import datetime
 from learning_method import power_law
-
+from learn_matrix_update import update_lm
 
 df=pd.read_csv("items.txt",sep=';')
 
@@ -23,7 +23,7 @@ if os.path.exists("learn_matrix.txt"):
 else:
     learn_matrix=pd.DataFrame(columns=["word","c_response","w_response","w/c_ratio","datetime_seen_first","datetime_last_c_response","p_law"])
 
-import learn_matrix_update
+update_lm()
 
 #epsilon=0.01
 
