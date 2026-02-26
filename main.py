@@ -4,14 +4,10 @@ import os
 from datetime import datetime
 from learning_method import power_law
 from learn_matrix_update import update_lm
-
+from randomness import randomness
 df=pd.read_csv("items.txt",sep=';')
 
-#print(df["meaning"][14])
-#print(len(df["word"]))
-SIZE_DICT=len(df["word"])
 
-num=random.randint(0,len(df["word"])-1)
 
 c_response=0
 w_response=0
@@ -24,11 +20,7 @@ else:
     learn_matrix=pd.DataFrame(columns=["word","c_response","w_response","w/c_ratio","datetime_seen_first","datetime_last_c_response","p_law"])
 
 update_lm()
-
-#epsilon=0.01
-
-#num=random.choices(learn_matrix[["word"]],weights=1/(epsilon + learn_matrix["p_law"]),k=1) ## Biraz daha karısmaya başladı.
-
+num=int(df.loc[df['word']==randomness(learn_matrix)].index[0])
 while True:
     print(f"What is the word ({df['type'][num]}) for the following: {df['meaning'][num]}")
     response=input("")
@@ -80,7 +72,7 @@ while True:
         print("Wrong. Correct answer is: ",df["word"][num])
     learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w/c_ratio"] =round(learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w_response"]/(1+learn_matrix.loc[learn_matrix["word"] == df["word"][num], "c_response"]),4)
     num_old.append(num)
-    num=random.randint(0,len(df["word"])-1)
+    num=int(df.loc[df['word']==randomness(learn_matrix)].index[0])
 print(learn_matrix)
 print(num_old)
 learn_matrix.to_csv("learn_matrix.txt",sep=";",index=False)
