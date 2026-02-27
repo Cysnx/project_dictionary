@@ -12,7 +12,13 @@ learn_matrix=pd.read_csv("learn_matrix.txt", sep=';')
 def randomness(learn_matrix):
     num=learn_matrix['p_law']
     #print(type(num))
-    randnum=float(random.choices(num, weights=1/(num+0.05), k=1)[0])
+    randnum = float(random.choices(num, weights=1 / (num + 0.005), k=1)[0])
+    n=0
+    while randnum==1:
+        randnum = float(random.choices(num, weights=1 / (num + 0.005), k=1)[0])
+        n=+1
+        if n==10:
+            break
     #print(type(randnum))
     randword=learn_matrix.loc[learn_matrix['p_law']==randnum, 'word'].values[0]
     #print(type(randword))
