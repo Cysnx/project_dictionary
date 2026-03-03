@@ -5,6 +5,7 @@ from datetime import datetime
 from learning_method import power_law
 from learn_matrix_update import update_lm
 from randomness import randomness
+from items_lm_comparison import update_source
 df=pd.read_csv("items.txt",sep=';')
 
 
@@ -19,10 +20,11 @@ if os.path.exists("learn_matrix.txt"):
 else:
     learn_matrix=pd.DataFrame(columns=["word","c_response","w_response","w/c_ratio","datetime_seen_first","datetime_last_c_response","p_law"])
 
+update_source()
 update_lm()
 num=int(df.loc[df['word']==randomness(learn_matrix)].index[0])
 row = learn_matrix.loc[learn_matrix["word"] == df["word"][num]].iloc[0]
-while True:
+for i in range(0,10):
     print(f"What is the word ({df['type'][num]}) for the following: {df['meaning'][num]}")
     response=input("")
     if response=="exit":

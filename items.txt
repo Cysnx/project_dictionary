@@ -81,3 +81,4 @@ word;language;type;meaning
 "oeuvre";"english";"noun";"a substantial body of work constituting the lifework of a writer, an artist, or a composer"
 "to impute";"english";"verb";"to credit or ascribe (something) to a person, cause, etc. : attribute"
 "forecasting";"english";"noun";"Computer Science - Subsection of prediction, to predict a value for future"
+"to plunge";"english";"verb";"to cause to enter a state or course of action usually suddenly, unexpectedly, or violently"
