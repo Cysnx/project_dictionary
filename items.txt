@@ -81,4 +81,11 @@ word;language;type;meaning
 "oeuvre";"english";"noun";"a substantial body of work constituting the lifework of a writer, an artist, or a composer"
 "to impute";"english";"verb";"to credit or ascribe (something) to a person, cause, etc. : attribute"
 "forecasting";"english";"noun";"Computer Science - Subsection of prediction, to predict a value for future"
-"to plunge";"english";"verb";"to cause to enter a state or course of action usually suddenly, unexpectedly, or violently"
+"to plunge";"english";"verb";"to cause to enter a state or course of action usually suddenly, unexpectedly, or violently",
+"revak";"türkçe";"isim";"sırtı bağlı bulunduğu binaya dayalı, ön cephesi açık, üstü örtülü ve örtüsü sütunlarla ya da payelerle taşınan mekana verilen ad."
+"predicate";"english";"noun";"a special kind of proposition, which is a proposition whose truth depends on the value of one or more variables - Math"
+"bogus";"english";"adjective";"not genuine : counterfeit, sham"
+"assertion";"english";"noun";"insistent and positive affirming, maintaining, or defending (as of a right or attribute)"
+"corollary";"english";"noun";"a proposition inferred immediately from a proved proposition with little or no additional proof"
+"ubiquitous";"english";"adjective";"existing or being everywhere at the same time : constantly encountered : widespread"
+"conflated";"english";"adjective";"confused with another or with each other : not properly differentiated"

@@ -23,5 +23,4 @@ def randomness(learn_matrix):
     randword=learn_matrix.loc[learn_matrix['p_law']==randnum, 'word'].values[0]
     #print(type(randword))
     return randword
-print(randomness(learn_matrix))
 
