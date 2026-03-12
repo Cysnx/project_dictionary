@@ -121,3 +121,5 @@ word;language;type;meaning
 "-plasty";"greek";"suffix";"reconstruction"
 "-stomy";"greek";"suffix";"creation of an opening"
 "-tomy";"greek";"suffix";"incision"
+"to compel";"english";"verb";"to drive or urge forcefully or irresistibly. ex: The general was ... to surrender."
+"rakik";"arapça";"sıfat";"ince, narin, nazik. Yufka yürekli"
