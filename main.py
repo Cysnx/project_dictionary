@@ -71,11 +71,17 @@ for i in range(0,N_OF_EXERCICES):
     learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w/c_ratio"]=round(learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w_response"]/(1+learn_matrix.loc[learn_matrix["word"] == df["word"][num], "c_response"]),4)
     num_old.append(num)
     learn_matrix.to_csv("learn_matrix.txt", sep=";", index=False)
+
     num=int(df.loc[df['word']==randomness(learn_matrix)].index[0])
+    a=0
     for n in num_old:
-        if n==num:
+        while n==num:
             print('alert') # burada düzetme ister.
             num = int(df.loc[df['word'] == randomness(learn_matrix)].index[0]) # burada düzetme ister.
+            a=a+1
+            if a>100:
+                break
+
     row = learn_matrix.loc[learn_matrix["word"] == df["word"][num]].iloc[0]
 #print(learn_matrix)
 print(num_old)
