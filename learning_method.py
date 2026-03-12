@@ -1,6 +1,8 @@
 from datetime import datetime
 import pandas as pd
 
+DELTA_MODIFIER=86400*2/4 # 12 Hours
+
 def power_law(c_response,w_response,datetime_last_c_response): ## bunu çalışmam gerek
     k = w_response / (1 + c_response)
     today = datetime.now()
@@ -19,6 +21,6 @@ def power_law(c_response,w_response,datetime_last_c_response): ## bunu çalışm
     else:
         last_c = pd.to_datetime(datetime_last_c_response).to_pydatetime()
 
-    delta = (today - last_c).total_seconds()/86400
+    delta = (today - last_c).total_seconds()/DELTA_MODIFIER
 
     return round((1 + delta) ** (-k),4)
