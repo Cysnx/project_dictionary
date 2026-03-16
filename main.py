@@ -1,5 +1,4 @@
 import pandas as pd
-import random
 import os
 from datetime import datetime
 from learning_method import power_law
@@ -33,41 +32,23 @@ for i in range(0,N_OF_EXERCICES):
     if response=="exit":
         break
     elif response==df["word"][num]: # doğru cevap
-        if df["word"][num] in learn_matrix["word"].values: # eğer kaydı VAR ise
-            learn_matrix.loc[learn_matrix["word"]==df["word"][num],"c_response"]+=1 # doğru cevap sayısını güncelle
-            learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"] = power_law(
-                row["c_response"],
-                row["w_response"],
-                row["datetime_last_c_response"]
-            )
-            learn_matrix.loc[learn_matrix["word"] == df["word"][num], "datetime_last_c_response"] =datetime.now().isoformat() # son doğru cevap tarihini güncelle
-        else: # eğer kaydı YOK ise
-            learn_matrix.loc[len(learn_matrix)]=[df["word"][num],0,0,0.0,datetime.now().isoformat(),datetime.now().isoformat(),0] # kaydını oluştur
-            learn_matrix.loc[learn_matrix["word"] == df["word"][num], "c_response"] += 1 # doğru cevap sayısını güncelle
-            learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"] = power_law(
-                row["c_response"],
-                row["w_response"],
-                row["datetime_last_c_response"]
-            )
-            #learn_matrix.loc[learn_matrix["word"] == df["word"][num], "datetime_last_c_response"] =datetime.now().isoformat()
+        learn_matrix.loc[learn_matrix["word"]==df["word"][num],"c_response"]+=1 # doğru cevap sayısını güncelle
+        learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"] = power_law(
+            row["c_response"],
+            row["w_response"],
+            row["datetime_last_c_response"]
+        )
+        learn_matrix.loc[learn_matrix["word"] == df["word"][num], "datetime_last_c_response"] =datetime.now().isoformat() # son doğru cevap tarihini güncelle
         print("Correct!")
-    else: # yanlış cevap
-        if df["word"][num] in learn_matrix["word"].values: # eğer kaydı VAR ise
-            learn_matrix.loc[learn_matrix["word"]==df["word"][num],"w_response"]+=1 # yanlış cevap sayısını güncelle
-            learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"] = power_law(
-                row["c_response"],
-                row["w_response"],
-                row["datetime_last_c_response"]
-            )
-        else: # eğer kaydı YOK ise
-            learn_matrix.loc[len(learn_matrix)]=[str(df["word"][num]),0,0,0.0,datetime.now().isoformat(),None,0] # kaydını oluştur
-            learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w_response"] += 1 # yanlış cevap sayısını güncelle
-            learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"] = power_law(
-                row["c_response"],
-                row["w_response"],
-                row["datetime_last_c_response"]
-            )
+    else:    # yanlış cevap
+        learn_matrix.loc[learn_matrix["word"]==df["word"][num],"w_response"]+=1 # yanlış cevap sayısını güncelle
+        learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"] = power_law(
+            row["c_response"],
+            row["w_response"],
+            row["datetime_last_c_response"]
+        )
         print("Wrong. Correct answer is: ",df["word"][num])
+
     learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w/c_ratio"]=round(learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w_response"]/(1+learn_matrix.loc[learn_matrix["word"] == df["word"][num], "c_response"]),4)
     num_old.append(num)
     learn_matrix.to_csv("learn_matrix.txt", sep=";", index=False)

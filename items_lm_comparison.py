@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime
 def update_source():
     # 1. Dosyaları belleğe yüklüyoruz
     items = pd.read_csv("items.txt", sep=";")
@@ -18,7 +19,7 @@ def update_source():
         # Kelime kümemizde yoksa...
         if word_b not in existing_words:
             # Onu bekleme odasına alıyoruz (Senin verdiğin 7 sütunlu formata sadık kalarak)
-            new_rows.append([word_b, 0, 0, 0, None, None, 0])
+            new_rows.append([word_b, 0, 0, 0, datetime.now().isoformat(), None, 0])
 
             # Kelimenin items.txt içinde kendini tekrar etme ihtimaline karşı,
             # onu hemen mevcut kelimeler kümemize de ekliyoruz ki aynı kelime iki kez girmesin.
@@ -33,9 +34,9 @@ def update_source():
         # Pandas'ın en sevdiği yöntem: Blokları uç uca eklemek (append yerine concat kullanıyoruz)
         learn_matrix = pd.concat([learn_matrix, new_df], ignore_index=True)
 
-        print(f"Sisteme {len(new_rows)} adet yeni kelime başarıyla entegre edildi.")
+        print(f"Sisteme {len(new_rows)} ea new words added successfully.")
     else:
-        print("Eklenecek yeni bir kelime bulunamadı. Matris güncel.")
+        print("No new items to be added.")
 
     # Son durumu inceleyelim
     #print(learn_matrix)
