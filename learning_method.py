@@ -1,10 +1,11 @@
 from datetime import datetime
 import pandas as pd
 
-DELTA_MODIFIER=86400*2/4 # 12 Hours
+SECONDS_PER_DAY = 86400
+DELTA_MODIFIER=SECONDS_PER_DAY*0.50 # 12 hours
 
 def power_law(c_response,w_response,datetime_last_c_response): ## bunu çalışmam gerek
-    k = w_response / (1 + c_response)
+    k = (w_response+0.001) / (1 + c_response)
     today = datetime.now()
 
     if (
