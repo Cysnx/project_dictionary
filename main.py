@@ -5,6 +5,7 @@ from learning_method import power_law
 from learn_matrix_update import update_lm
 from randomness import randomness
 from items_lm_comparison import update_source
+from time_series_imp import time_series_imp
 
 df=pd.read_csv("items.txt",sep=';')
 
@@ -20,7 +21,6 @@ if os.path.exists("learn_matrix.txt"):
     learn_matrix=pd.read_csv("learn_matrix.txt", sep=';')
 else:
     learn_matrix=pd.DataFrame(columns=["word","c_response","w_response","w/c_ratio","datetime_seen_first","datetime_last_c_response","p_law"])
-
 
 update_lm()
 
@@ -52,7 +52,7 @@ for i in range(0,N_OF_EXERCICES):
     learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w/c_ratio"]=round(learn_matrix.loc[learn_matrix["word"] == df["word"][num], "w_response"]/(1+learn_matrix.loc[learn_matrix["word"] == df["word"][num], "c_response"]),4)
     num_old.append(num)
     learn_matrix.to_csv("learn_matrix.txt", sep=";", index=False)
-
+    time_series_imp(df["word"][num],float(learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"].values[0]))
     num=int(df.loc[df['word']==randomness(learn_matrix)].index[0])
     a=0
     for n in num_old:
@@ -62,7 +62,6 @@ for i in range(0,N_OF_EXERCICES):
             a=a+1
             if a>100:
                 break
-
     row = learn_matrix.loc[learn_matrix["word"] == df["word"][num]].iloc[0]
 #print(learn_matrix)
 print(num_old)
