@@ -9,7 +9,7 @@ from time_series_imp import time_series_imp
 
 df=pd.read_csv("items.txt",sep=';')
 
-N_OF_EXERCICES=20
+N_OF_EXERCICES=25
 
 c_response=0
 w_response=0
@@ -32,7 +32,7 @@ for i in range(0,N_OF_EXERCICES):
     if response=="exit":
         break
     elif response==df["word"][num]: # doğru cevap
-        learn_matrix.loc[learn_matrix["word"]==df["word"][num],"c_response"]+=1 # doğru cevap sayısını güncelle
+        learn_matrix.loc[learn_matrix["word"]==df["word"][num],"c_response"]+=1 # update the number of correct answers
         learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"] = power_law(
             row["c_response"],
             row["w_response"],
@@ -41,7 +41,7 @@ for i in range(0,N_OF_EXERCICES):
         learn_matrix.loc[learn_matrix["word"] == df["word"][num], "datetime_last_c_response"] =datetime.now().isoformat() # son doğru cevap tarihini güncelle
         print("Correct!")
     else:    # yanlış cevap
-        learn_matrix.loc[learn_matrix["word"]==df["word"][num],"w_response"]+=1 # yanlış cevap sayısını güncelle
+        learn_matrix.loc[learn_matrix["word"]==df["word"][num],"w_response"]+=1 # update the number of wrong answers
         learn_matrix.loc[learn_matrix["word"] == df["word"][num], "p_law"] = power_law(
             row["c_response"],
             row["w_response"],

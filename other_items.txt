@@ -1,10 +1,6 @@
 "-ac/-al/-ar/-ary/-eal/-ic/-tic/-ous";"greek";"suffix";"pertaining to"
 "-ole/-ule/-ula";"greek";"suffix";"small"
 "-cele";"greek";"suffix";"hernia"
-"-emia";"greek";"suffix";"blood condition"
-"-iasis";"greek";"suffix";"presence of"
-"-itis";"greek";"suffix";"inflammation"
-"-lysis";"greek";"suffix";"loosen, break down"
 "-malacia";"greek";"suffix";"abnormal softening"
 "-centesis";"greek";"suffix";"puncture"
 "-gram";"greek";"suffix";"written record"
@@ -21,7 +17,6 @@
 "-logy/-iatrics/-iatry";"greek";"suffix";"medical science, study of"
 "a-/an-";"greek";"prefix";"not"
 "anti-/contra-";"greek";"prefix";"against"
-"de-";"greek";"prefix";"down, away from"
 "ante-/pre-";"greek";"prefix";"before"
 "circum-/peri-";"greek";"prefix";"around"
 "en-/endo-/intra-";"greek";"prefix";"in, inside"
@@ -152,3 +147,27 @@
 "Urgency";"english";"term";"recognition of project importance and action need"
 "Values";"english";"term";"principles guiding employee behavior"
 "Waterfall";"english";"term";"linear sequential project management approach"
+
+ur/o, urin/o;"latin";"root";medical - urine
+nephr/o, ren/o;"latin";"root";medical - kidney
+cyst/o, vesic/o;"greek"/"latin";"root";medical - urinary bladder
+urethr/o;"greek";"root";medical - urethra
+hem/o, hemat/o;"greek";"root";medical - blood
+phleb/o, ven/o;"latin";"root";"medical - vein"
+lymph/o;"latin";"root";medical - lymph
+tonsil/o;"latin";"root";medical - tonsil
+splen/o;"greek";"root";medical - spleen
+immun/o;"latin";"root";medical - immune system
+thym/o;"greek";"root";medical - thymus gland
+oste/o;"greek";"root";medical - bone
+"cost/o";"latin";"root";"medical - rib"
+brachi/o;"greek";"root";medical - arm
+carp/o;"greek";"root";medical - wrist
+femor/o;"latin";"root";medical - femur (thigh bone)
+tibi/o;"latin";"root";medical - tibia (shinbone)
+tars/o;"greek";"root";medical - ankle, tarsal bones
+chondr/o;"greek";"root";medical - cartilage
+arthr/o;"greek";"root";medical - joint
+burs/o;"latin";"root";medical - bursa (fluid-filled sac)
+muscul/o, my/o, myos/o;"latin";"root";medical - muscle
+ten/o, tend/o, tendin/o;"latin";"root";medical - tendon
