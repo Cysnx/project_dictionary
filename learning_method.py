@@ -5,7 +5,7 @@ SECONDS_PER_DAY = 86400
 DELTA_MODIFIER=SECONDS_PER_DAY*0.50 # 12 hours
 
 def power_law(c_response,w_response,datetime_last_c_response): ## bunu çalışmam gerek
-    k = (w_response^2+0.001) / (1 + c_response)
+    k = ((w_response**1.5)+0.001) / (1 + c_response)
     today = datetime.now()
 
     if (
