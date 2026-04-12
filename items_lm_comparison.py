@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 def update_source():
-    # 1. Dosyaları belleğe yüklüyoruz
+    # 1. Read the files.
     items = pd.read_csv("items.txt", sep=";")
     learn_matrix = pd.read_csv("learn_matrix.txt", sep=";")
 
@@ -34,7 +34,7 @@ def update_source():
         # Pandas'ın en sevdiği yöntem: Blokları uç uca eklemek (append yerine concat kullanıyoruz)
         learn_matrix = pd.concat([learn_matrix, new_df], ignore_index=True)
 
-        print(f"Sisteme {len(new_rows)} ea new words added successfully.")
+        print(f"{len(new_rows)} ea new words added successfully.")
     else:
         print("No new items to be added.")
 

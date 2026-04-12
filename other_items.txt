@@ -3,15 +3,9 @@
 "-cele";"greek";"suffix";"hernia"
 "-malacia";"greek";"suffix";"abnormal softening"
 "-centesis";"greek";"suffix";"puncture"
-"-gram";"greek";"suffix";"written record"
-"-graph";"greek";"suffix";"instrument to record"
-"-graphy";"greek";"suffix";"process of recording"
-"-meter";"greek";"suffix";"instrument to measure"
-"-metry";"greek";"suffix";"process of measuring"
 "-ia/-ism";"greek";"suffix";"condition"
 "-ium";"greek";"suffix";"tissue, structure"
 "-y";"greek";"suffix";"condition, procedure"
-"-desis";"greek";"suffix";"binding, fixation"
 "-pexy";"greek";"suffix";"surgical fixation"
 "-rrhaphy";"greek";"suffix";"suture"
 "-logy/-iatrics/-iatry";"greek";"suffix";"medical science, study of"
@@ -24,7 +18,6 @@
 "hemi-/semi-";"greek";"prefix";"half"
 "pan-";"greek";"prefix";"all"
 "e-/ec-/ex-";"greek";"prefix";"out"
-"ecto-";"greek";"prefix";"outside"
 "con-/syn-/sym-";"greek";"prefix";"with, together"
 "dys-";"greek";"prefix";"bad"
 "eu-";"greek";"prefix";"good"
@@ -147,8 +140,7 @@
 "Urgency";"english";"term";"recognition of project importance and action need"
 "Values";"english";"term";"principles guiding employee behavior"
 "Waterfall";"english";"term";"linear sequential project management approach"
-
-ur/o, urin/o;"latin";"root";medical - urine
+"ur/o, urin/o";"latin";"root";medical - urine
 nephr/o, ren/o;"latin";"root";medical - kidney
 cyst/o, vesic/o;"greek"/"latin";"root";medical - urinary bladder
 urethr/o;"greek";"root";medical - urethra
