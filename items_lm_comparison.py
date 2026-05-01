@@ -5,12 +5,12 @@ def update_source():
     items = pd.read_csv("items.txt", sep=";")
     learn_matrix = pd.read_csv("learn_matrix.txt", sep=";")
 
-    # 2. Kümeleme (Set Creation)
-    # Arama maliyetini O(N)'den O(1)'e düşüren o kritik adım.
-    # Artık içerideki kelimeleri bir "hash table" olarak tutuyoruz.
+    # 2. Set Creation
+    # Cost: O(N) to O(1)
+    # Lookup: "hash table"
     existing_words = set(learn_matrix['word'])
 
-    # 3. Bekleme Odası (Buffer)
+    # 3. Buffer
     # Ana matrisi sürekli rahatsız etmemek için yeni kelimeleri burada biriktireceğiz.
     new_rows = []
 
